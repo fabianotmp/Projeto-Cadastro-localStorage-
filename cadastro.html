@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +8,22 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/cadastro.css">
 </head>
-
 <body>
     <header>
         <nav>
-            <ul>
-                <img class="logo" src="assets/img/ctrl3d.png" alt="Ctrl3D">
-            </ul>
+            <img class="logo" src="assets/img/ctrl3d.png" alt="Ctrl3D">
             <ul>        
                 <li><a href="index.html">Início</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
                 <li><a href="backup.html">Backup</a></li>
             </ul>
+            <div class="hamburguer">
+                <span class="bar"></span> 
+                <span class="bar"></span> 
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
-
     <main>
         <section>
             <input type="text" id="nome" placeholder="Nome da Nova Equipe">
@@ -30,7 +31,6 @@
             <button onclick="selecionarArquivo()">Escolher Imagem</button>
             <button class="add-btn" onclick="adicionarEquipe()">Adicionar</button>
         </section>
-    
         <table id="tabela-equipes">
                 <thead>
                     <tr>
@@ -42,11 +42,10 @@
                     </tr>
                 </thead>
                 <tbody></tbody>
-            </table>
+        </table>
     </main>
-
     <footer>&copy; 2023</footer>
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/cadastro.js"></script>
 </body>
-
 </html>
