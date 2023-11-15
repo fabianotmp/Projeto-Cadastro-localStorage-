@@ -80,16 +80,15 @@ function adicionarEquipeNoLocalStorage(nome, imagem) {
 }
 
 function editarEquipe(id) {
+    const confirmacao = confirm("Deseja realmente editar a equipe?")
+    if (!confirmacao) return
+
     const novoNome = prompt("Qual é o nome da equipe?")
-    if (novoNome === null || novoNome.trim() === "") {
-        return
-    }
+    if (novoNome === null || novoNome.trim() === "") return
 
     let equipes = JSON.parse(localStorage.getItem('equipes')) || []
     equipes = equipes.map(equipe => {
-        if (equipe.id === id) {
-            equipe.nome = novoNome
-        }
+        if (equipe.id === id) equipe.nome = novoNome
         return equipe
     })
     localStorage.setItem('equipes', JSON.stringify(equipes))
