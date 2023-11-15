@@ -1,11 +1,15 @@
 main{
     text-align: center;
+    gap: 1.5em;
+    justify-content: center;
 }
 article{
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
     background-color: #ccc;
-    padding: 2em;
+    padding: 1.5em;
     gap:1em;
     border-radius: 0.5em;
 }
@@ -30,4 +34,16 @@ article #exportar-btn{
 
 article button:hover, article input::file-selector-button:hover {
     opacity:calc(0.8);
+}
+
+@media (max-width:1080px) {
+    main {
+        width: 90%;
+    }
+}
+
+@media (max-width:520px) {
+    main {
+        width: 100%;
+    }
 }
