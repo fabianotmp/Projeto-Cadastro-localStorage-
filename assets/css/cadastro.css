@@ -53,27 +53,31 @@ td {
 }
 th:nth-child(1),
 td:nth-child(1) {
-    display: none;
+    width: 5%;
+    text-align: center;
 }
 
 th:nth-child(2),
 td:nth-child(2) {
+    display: none;
+}
+th:nth-child(3),
+td:nth-child(3) {
     width: 10%;
     text-align: center; 
 }
-
-th:nth-child(3),
-td:nth-child(3) {
-    width: 60%;
+th:nth-child(4),
+td:nth-child(4) {
+    width: 55%;
     text-align: center;
 }
 
-th:nth-child(4),
-td:nth-child(4) {
+th:nth-child(5),
+td:nth-child(5) {
     width: 30%;
     text-align: center;
 }
-td:nth-child(4) button {
+td:nth-child(5) button {
     text-transform: uppercase;
     font-weight: bolder;
     margin: 0.25em 0.25em;
@@ -85,10 +89,10 @@ td:nth-child(4) button {
     border: none;
     transition: transform 300ms;
 }
-td:nth-child(4) button:hover {
+td:nth-child(5) button:hover {
     transform: scale(1.1);
 }
-td:nth-child(4) .editar-btn {
+td:nth-child(5) .editar-btn {
     background-color: var(--amarelo);
 }
 .logo-equipe {
