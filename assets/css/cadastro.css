@@ -1,0 +1,102 @@
+/* Cadastro */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+}
+section input{
+    padding: 1em;
+}
+section button{
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 1em;
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--preto);
+    border-radius: 0.5em;
+    border: none;
+    transition: transform 300ms;
+}
+section .add-btn{
+    background-color:var(--ciano);
+}
+section button:hover, section input::file-selector-button:hover {
+    opacity:calc(0.8);
+}
+
+/* Tabela Cadastro */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+th{
+    background-color: var(--ciano);
+    color:#fff;
+}
+table,
+th,
+td {
+    border: 1px solid black;
+}
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+th:nth-child(1),
+td:nth-child(1) {
+    display: none;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 10%;
+    text-align: center; 
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 60%;
+    text-align: center;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 30%;
+    text-align: center;
+}
+td:nth-child(4) button {
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin: 0.25em 0.25em;
+    padding: 1em;
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--preto);
+    border-radius: 0.5em;
+    border: none;
+    transition: transform 300ms;
+}
+td:nth-child(4) button:hover {
+    transform: scale(1.1);
+}
+td:nth-child(4) .editar-btn {
+    background-color: var(--amarelo);
+}
+.logo-equipe {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;    
+    transition: transform 300ms;
+}
+.logo-equipe:hover{
+    transform: scale(1.1);
+}
