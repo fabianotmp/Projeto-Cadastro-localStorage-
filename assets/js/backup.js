@@ -1,16 +1,23 @@
 // Exportar
 function exportarEquipes() {
-    const equipes = JSON.parse(localStorage.getItem('equipes')) || []
-    const dadosJSON = JSON.stringify({ equipes })
-    const blob = new Blob([dadosJSON], { type: 'text/plain' })
-    const link = document.createElement('a')
-    link.href = window.URL.createObjectURL(blob)
-    link.download = 'dados_equipe.txt'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+    const equipes = JSON.parse(localStorage.getItem('equipes')) || [];
+    const dadosJSON = JSON.stringify({ equipes });
+
+    const momento = Date.now();
+    const nomeArquivo = `dados_${momento}.txt`;
+
+    const blob = new Blob([dadosJSON], { type: 'text/plain' });
+    const link = document.createElement('a');
+
+    link.href = window.URL.createObjectURL(blob);
+    link.download = nomeArquivo;
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }
-document.getElementById('exportar-btn').addEventListener('click', exportarEquipes)
+
+document.getElementById('exportar-btn').addEventListener('click', exportarEquipes);
 
 // Importar 
 document.getElementById('importar-btn').addEventListener('click', function () {
