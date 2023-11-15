@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/icon.ico" type="image/x-icon">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <img class="logo" src="assets/img/ctrl3d.png" alt="Ctrl3D">
+            </ul>
+            <ul>        
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="backup.html">Backup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <input type="text" id="nome" placeholder="Nome da Nova Equipe">
+            <input type="file" id="logoInput" accept=".png, .jpeg, .jpg, .webp" style="display: none;">
+            <button onclick="selecionarArquivo()">Escolher Imagem</button>
+            <button class="add-btn" onclick="adicionarEquipe()">Adicionar</button>
+        </section>
+    
+        <table id="tabela-equipes">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Logo</th>
+                        <th>Nome</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+    </main>
+
+    <footer>&copy; 2023</footer>
+    <script src="assets/js/cadastro.js"></script>
+</body>
+
+</html>
