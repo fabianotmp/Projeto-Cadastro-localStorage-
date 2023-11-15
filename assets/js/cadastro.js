@@ -160,13 +160,15 @@ function mostrarEquipes() {
     const tabelaEquipes = document.getElementById('tabela-equipes').getElementsByTagName('tbody')[0]
     tabelaEquipes.innerHTML = ""
 
-    equipes.forEach(equipe => {
+    equipes.forEach((equipe, index) => {
         const row = tabelaEquipes.insertRow()
-        const cellId = row.insertCell(0)
-        const cellLogo = row.insertCell(1)
-        const cellNome = row.insertCell(2)
-        const cellAcoes = row.insertCell(3)
+        const cellSequencial = row.insertCell(0)
+        const cellId = row.insertCell(1)
+        const cellLogo = row.insertCell(2)
+        const cellNome = row.insertCell(3)
+        const cellAcoes = row.insertCell(4)
 
+        cellSequencial.textContent = index + 1
         cellId.textContent = equipe.id
         cellNome.textContent = equipe.nome
 
