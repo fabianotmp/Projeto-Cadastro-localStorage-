@@ -108,7 +108,7 @@ footer{
     ul {
 	    position: fixed;
         left: -100%;
-        top: 3.1em;
+        top: 4em;
         border-radius: 0 0 1.25em 1.25em;
         background-color: var(--ciano);
         text-align: center;
