@@ -1,9 +1,10 @@
-/* Cadastro */
 section {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1.5em;
+    margin-bottom: 1.5em;
 }
 section input{
     padding: 1em;
@@ -26,7 +27,6 @@ section button:hover, section input::file-selector-button:hover {
     opacity:calc(0.8);
 }
 
-/* Tabela Cadastro */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -103,4 +103,16 @@ td:nth-child(5) .editar-btn {
 }
 .logo-equipe:hover{
     transform: scale(1.1);
+}
+
+@media (max-width:1500px) {
+    main {
+        width: 90%;
+    }
+}
+
+@media (max-width:550px) {
+    main {
+        width: 100%;
+    }
 }
