@@ -1,31 +1,31 @@
-const inputFile = document.querySelector("#logoInput");
-const imagem = document.querySelector(".imagemPreview");
-const textoImagem = "Escolha a imagem";
-imagem.innerHTML = textoImagem;
+const inputFile = document.querySelector("#logoInput")
+const imagem = document.querySelector(".imagemPreview")
+const textoImagem = "Escolha a imagem"
+imagem.innerHTML = textoImagem
 
 inputFile.addEventListener("change", function (e) {
-  const inputTarget = e.target;
-  const file = inputTarget.files[0];
+  const inputTarget = e.target
+  const file = inputTarget.files[0]
 
   if (file) {
-    const reader = new FileReader();
+    const reader = new FileReader()
 
     reader.addEventListener("load", function (e) {
-      const readerTarget = e.target;
+      const readerTarget = e.target
 
-      const img = document.createElement("img");
-      img.src = readerTarget.result;
-      img.classList.add("imagem");
+      const img = document.createElement("img")
+      img.src = readerTarget.result
+      img.classList.add("imagem")
 
-      imagem.innerHTML = "";
-      imagem.appendChild(img);
+      imagem.innerHTML = ""
+      imagem.appendChild(img)
     });
 
-    reader.readAsDataURL(file);
+    reader.readAsDataURL(file)
   } else {
-    imagem.innerHTML = textoImagem;
+    imagem.innerHTML = textoImagem
   }
-});
+})
 function adicionarEquipe() {
     const nome = document.getElementById('nome').value
     const logoInput = document.getElementById('logoInput')
@@ -198,6 +198,7 @@ function mostrarEquipes() {
         const logoImg = document.createElement('img')
         logoImg.src = equipe.imagem
         logoImg.alt = "Logo da Equipe"
+        LogoImg.text = "Trocar Imagem"
         logoImg.classList.add('logo-equipe')
         logoImg.addEventListener('click', function() {
             trocarLogo(equipe.id)
