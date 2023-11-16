@@ -198,7 +198,6 @@ function mostrarEquipes() {
         const logoImg = document.createElement('img')
         logoImg.src = equipe.imagem
         logoImg.alt = "Logo da Equipe"
-        LogoImg.text = "Trocar Imagem"
         logoImg.classList.add('logo-equipe')
         logoImg.addEventListener('click', function() {
             trocarLogo(equipe.id)
