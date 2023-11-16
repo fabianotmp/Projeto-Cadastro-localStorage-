@@ -26,8 +26,6 @@ inputFile.addEventListener("change", function (e) {
     imagem.innerHTML = textoImagem;
   }
 });
-
-
 function adicionarEquipe() {
     const nome = document.getElementById('nome').value
     const logoInput = document.getElementById('logoInput')
@@ -88,7 +86,6 @@ function adicionarEquipe() {
     logoInput.value = ""
     imagem.innerHTML = textoImagem;
 }
-
 document.getElementById('nome').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         adicionarEquipe()
@@ -98,7 +95,6 @@ document.getElementById('nome').addEventListener('keypress', function(event) {
 function selecionarArquivo() {
     document.getElementById('logoInput').click()
 }
-
 function adicionarEquipeNoLocalStorage(nome, imagem) {
     const id = Date.now().toString()
     const equipe = { id, nome, imagem }
@@ -109,7 +105,6 @@ function adicionarEquipeNoLocalStorage(nome, imagem) {
 
     mostrarEquipes()
 }
-
 function editarEquipe(id) {
     const equipes = JSON.parse(localStorage.getItem('equipes')) || []
     const equipeAtual = equipes.find(equipe => equipe.id === id)
@@ -134,7 +129,6 @@ function editarEquipe(id) {
 
     mostrarEquipes()
 }
-
 function excluirEquipe(id) {
     if (confirm("Tem certeza que deseja excluir esta equipe?")) {
         let equipes = JSON.parse(localStorage.getItem('equipes'))
@@ -144,7 +138,6 @@ function excluirEquipe(id) {
         mostrarEquipes()
     }
 }
-
 function trocarLogo(id) {
     const logoInput = document.createElement('input')
     logoInput.type = 'file'
@@ -185,7 +178,6 @@ function trocarLogo(id) {
     })
     logoInput.click()
 }
-
 function mostrarEquipes() {
     let equipes = JSON.parse(localStorage.getItem('equipes')) || []
     const tabelaEquipes = document.getElementById('tabela-equipes').getElementsByTagName('tbody')[0]
@@ -229,5 +221,4 @@ function mostrarEquipes() {
         cellAcoes.appendChild(excluirBtn)
     })
 }
-
 mostrarEquipes()
