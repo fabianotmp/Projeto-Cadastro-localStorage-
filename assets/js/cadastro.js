@@ -1,31 +1,33 @@
-const inputFile = document.querySelector("#logoInput")
-const imagem = document.querySelector(".imagemPreview")
-const textoImagem = "Escolha a imagem"
-imagem.innerHTML = textoImagem
+const inputFile = document.querySelector("#logoInput");
+const imagem = document.querySelector(".imagemPreview");
+const textoImagem = "Escolha a imagem";
+imagem.innerHTML = textoImagem;
 
 inputFile.addEventListener("change", function (e) {
-  const inputTarget = e.target
-  const file = inputTarget.files[0]
+  const inputTarget = e.target;
+  const file = inputTarget.files[0];
 
   if (file) {
-    const reader = new FileReader()
+    const reader = new FileReader();
 
     reader.addEventListener("load", function (e) {
-      const readerTarget = e.target
+      const readerTarget = e.target;
 
-      const img = document.createElement("img")
-      img.src = readerTarget.result
-      img.classList.add("imagem")
+      const img = document.createElement("img");
+      img.src = readerTarget.result;
+      img.classList.add("imagem");
 
-      imagem.innerHTML = ""
-      imagem.appendChild(img)
+      imagem.innerHTML = "";
+      imagem.appendChild(img);
     });
 
-    reader.readAsDataURL(file)
+    reader.readAsDataURL(file);
   } else {
-    imagem.innerHTML = textoImagem
+    imagem.innerHTML = textoImagem;
   }
-})
+});
+
+
 function adicionarEquipe() {
     const nome = document.getElementById('nome').value
     const logoInput = document.getElementById('logoInput')
@@ -86,6 +88,7 @@ function adicionarEquipe() {
     logoInput.value = ""
     imagem.innerHTML = textoImagem;
 }
+
 document.getElementById('nome').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         adicionarEquipe()
@@ -95,6 +98,7 @@ document.getElementById('nome').addEventListener('keypress', function(event) {
 function selecionarArquivo() {
     document.getElementById('logoInput').click()
 }
+
 function adicionarEquipeNoLocalStorage(nome, imagem) {
     const id = Date.now().toString()
     const equipe = { id, nome, imagem }
@@ -105,6 +109,7 @@ function adicionarEquipeNoLocalStorage(nome, imagem) {
 
     mostrarEquipes()
 }
+
 function editarEquipe(id) {
     const equipes = JSON.parse(localStorage.getItem('equipes')) || []
     const equipeAtual = equipes.find(equipe => equipe.id === id)
@@ -129,6 +134,7 @@ function editarEquipe(id) {
 
     mostrarEquipes()
 }
+
 function excluirEquipe(id) {
     if (confirm("Tem certeza que deseja excluir esta equipe?")) {
         let equipes = JSON.parse(localStorage.getItem('equipes'))
@@ -138,6 +144,7 @@ function excluirEquipe(id) {
         mostrarEquipes()
     }
 }
+
 function trocarLogo(id) {
     const logoInput = document.createElement('input')
     logoInput.type = 'file'
@@ -178,6 +185,7 @@ function trocarLogo(id) {
     })
     logoInput.click()
 }
+
 function mostrarEquipes() {
     let equipes = JSON.parse(localStorage.getItem('equipes')) || []
     const tabelaEquipes = document.getElementById('tabela-equipes').getElementsByTagName('tbody')[0]
@@ -221,4 +229,5 @@ function mostrarEquipes() {
         cellAcoes.appendChild(excluirBtn)
     })
 }
+
 mostrarEquipes()
