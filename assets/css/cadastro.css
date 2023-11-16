@@ -20,7 +20,7 @@ section button{
     border: none;
     transition: transform 300ms;
 }
-section .add-btn{
+section .adicionar-btn{
     background-color:var(--ciano);
 }
 section button:hover, section input::file-selector-button:hover {
