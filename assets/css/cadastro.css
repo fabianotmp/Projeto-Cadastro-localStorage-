@@ -150,6 +150,7 @@ td:nth-child(5) .editar-btn {
 @media (max-width:550px) {
     section{
         width: 100%;
+        gap:1em;
     }
     main {
         width: 100%;
