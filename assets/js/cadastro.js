@@ -108,6 +108,10 @@ function adicionarEquipeNoLocalStorage(nome, imagem) {
     localStorage.setItem('equipes', JSON.stringify(equipes))
 
     mostrarEquipes()
+
+    setTimeout(() => {
+        alert(`Você adicionou: ${nome}`)
+    }, 50)
 }
 
 function editarEquipe(id) {
