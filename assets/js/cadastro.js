@@ -27,9 +27,9 @@ inputFile.addEventListener("change", function (e) {
   }
 });
 
-
 function adicionarEquipe() {
-    const nome = document.getElementById('nome').value
+    const nomeInput = document.getElementById('nome');
+    const nome = nomeInput.value.trim();
     const logoInput = document.getElementById('logoInput')
     const logoArquivo = logoInput.files[0]
     const logoPadrao = 'assets/img/logo.webp'
