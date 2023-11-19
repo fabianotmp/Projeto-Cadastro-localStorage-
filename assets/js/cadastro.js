@@ -129,7 +129,7 @@ function editarEquipe(id) {
     const nomeJaExistente = equipes.some(equipe => equipe.nome === novoNome)
 
     if (nomeJaExistente) {
-        alert("Nome já existe. Escolha um nome diferente.")
+        alert("Este nome de equipe já está em uso.")
         return
     }
 
