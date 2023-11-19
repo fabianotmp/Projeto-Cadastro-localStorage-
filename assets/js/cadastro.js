@@ -116,7 +116,7 @@ function editarEquipe(id) {
 
     if (!equipeAtual) return
 
-    const novoNome = prompt("Qual é o novo nome da equipe?", equipeAtual.nome)
+    const novoNome = prompt("Qual é o novo nome da equipe?", equipeAtual.nome).trim()
 
     if (novoNome === null || novoNome.trim() === "" || novoNome === equipeAtual.nome) {
         return
