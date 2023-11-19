@@ -43,7 +43,7 @@ function adicionarEquipe() {
     const nomeJaExiste = equipes.some(equipe => equipe.nome.toLowerCase() === nome.toLowerCase())
 
     if (nomeJaExiste) {
-        alert("Este nome de equipe já está em uso. Escolha um nome único.")
+        alert("Este nome de equipe já está em uso.")
         return
     }
 
@@ -52,13 +52,13 @@ function adicionarEquipe() {
         const extensao = logoArquivo.name.substring(logoArquivo.name.lastIndexOf('.')).toLowerCase()
 
         if (!extensoesAceitas.includes(extensao)) {
-            alert("Por favor, selecione um arquivo de logo no formato PNG, JPEG ou WebP.")
+            alert("Por favor, selecione um arquivo no formato PNG, JPEG ou WebP.")
             return
         }
 
         const tamanhoMaximo = 2 * 1024 * 1024 
         if (logoArquivo.size > tamanhoMaximo) {
-            alert("O arquivo de logo deve ter no máximo 2MB.")
+            alert("O arquivo deve ter no máximo 2MB.")
             return
         }
 
