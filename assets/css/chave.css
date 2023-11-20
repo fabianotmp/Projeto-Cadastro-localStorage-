@@ -1,0 +1,140 @@
+main {
+    width: 100%;
+    padding: 0;
+	margin: 0;
+}
+section {
+	display: flex;
+	justify-content:space-around;
+	gap:1em;
+    width: 100vw;
+    background-color: var(--ciano);
+    color: var(--branco);
+    padding: 0.5em 2em;
+}
+
+section button{
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 1em;
+    cursor: pointer;
+    color: var(--branco);
+    background-color: var(--preto);
+    border-radius: 0.5em;
+    border: none;
+    transition: transform 300ms;
+}
+section button:hover{
+    transform: scale(1.02);
+}
+.chave{
+    padding-bottom: 1.25em;
+	display: none;
+}
+.repescagem  {
+    padding-bottom: 1.25em;
+}
+.container-regular {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.container-repescagem  {
+    padding-bottom: 1.25em;
+	display: none;
+}
+h2{
+		padding-left: 0 1em;
+}
+.selecionar{
+	padding: 1em;
+}
+
+.chave ul, .repescagem ul {
+    display: flex;
+    justify-content: center;
+	padding-top: 1.25em; 
+    position: relative;
+}
+.chave li, .repescagem li {
+	float: left; 
+    text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 1.25em 0.313em 0 0.313em;
+}
+.chave li::before, .chave li::after, .repescagem li::before, .repescagem li::after{
+	content: '';
+	position: absolute; top: 0; right: 50%;
+	border-top: 0.063em solid black;
+	width: 50%; height: 1.25em;
+}
+.chave li::after, .repescagem li::after{
+	right: auto; left: 50%;
+	border-left: 0.063em solid black;
+}
+.chave li:only-child::after, .chave li:only-child::before, .repescagem li:only-child::after, .repescagem li:only-child::before{
+	display: none;
+}
+.chave li:only-child, .repescagem li:only-child{ 
+	padding-top: 0;
+}
+
+.chave li:first-child::before, .chave li:last-child::after, .repescagem li:first-child::before, .repescagem li:last-child::after{
+	border: 0 none;
+}
+.chave li:last-child::before, .repescagem li:last-child::before{
+	border-right: 0.063em solid black;
+}
+.chave ul ul::before, .repescagem ul ul::before{
+	content: '';
+	position: absolute; top: 0; left: 50%;
+	border-left: 0.063em solid black;
+	width: 0; height: 1.25em;
+}
+.chave li .quadro, .repescagem li .quadro{
+    background-color: var(--preto);
+    color: var(--preto);
+	width: 3.9em;
+	height: 3.9em;
+	border: 0.063em solid black;
+	padding: 0.313em 0.625;
+	text-decoration: none;
+	display: inline-block;
+}
+
+#torneio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+    padding: 1em;
+}
+
+.disputa-container{
+	border: 1px solid #000;
+	padding: 0.5em;
+    color:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.5em;
+}
+.equipe{
+    text-align: center;
+}
+.equipe img{
+    width: 5em;
+    cursor: pointer;
+	border: 1px solid #000;
+}
+.gerar-btn{
+    background-color: var(--amarelo);
+    color:#000;
+}
+h2{
+    padding: 1em;
+}
