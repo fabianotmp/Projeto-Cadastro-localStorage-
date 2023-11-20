@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/icon.ico" type="image/x-icon">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/chave.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="logo" src="assets/img/ctrl3d.png" alt="Ctrl3D">
+            <ul>        
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="backup.html">Backup</a></li>
+            </ul>
+            <div class="hamburguer">
+                <span class="bar"></span> 
+                <span class="bar"></span> 
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <section>     
+        <button id="mostrar-regular">Mostrar Regular</button>
+        <button id="mostrar-repescagem">Mostrar Repescagem</button>
+        <button id="mostrar-ambas">Mostrar Ambas</button>
+        <button class="gerar-btn">Gerar Competição</button>
+    </section>
+
+    <main>
+        <div class="container-regular">
+            <div class="selecionar">
+                <label for="select-equipes">Número de equipes:</label>
+                <select id="select-equipes">
+                    <option value="0">0</option>
+                    <option value="quatro">4</option>
+                    <option value="oito">8</option>
+                    <option value="dezesseis">16</option>
+                </select>
+            </div>
+
+        <h2>Regular</h2>
+
+            <div class="chave quatro">
+                <ul>
+                    <li>
+                        <div class="quadro">1</div>
+                        <ul>
+                            <li>
+                                <div class="quadro">2</div>
+                                <ul>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                    </li>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="quadro">2</div>
+                            </li>
+                            <li>
+                                <div class="quadro">2</div>
+                                <ul>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                    </li>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="chave oito">
+                <ul>
+                    <li>
+                        <div class="quadro">1</div>
+                        <ul>
+                            <li>
+                                <div class="quadro">2</div>
+                                <ul>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                        <ul>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                            </li>
+                                            <li>    
+                                                <div class="quadro">4</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                        <ul>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                            </li>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="quadro">2</div>
+                            </li>
+                            <li>
+                                <div class="quadro">2</div>
+                                <ul>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                        <ul>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                            </li>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                        <ul>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                            </li>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="chave dezesseis">
+                <ul>
+                    <li>
+                        <div class="quadro">1</div>
+                        <ul>
+                            <li>
+                                <div class="quadro">2</div>
+                                <ul>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                        <ul>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>    
+                                                <div class="quadro">4</div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                        <ul>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="quadro">2</div>
+                            </li>
+                            <li>
+                                <div class="quadro">2</div>
+                                <ul>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                        <ul>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                        <ul>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="quadro">5</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="torneio"></div>
+
+        <div class="container-repescagem">
+        <h2>Repescagem</h2>
+
+            <div class="repescagem">
+                <ul>
+                    <li>
+                        <div class="quadro">1</div>
+                        <ul>
+                            <li>
+                                <div class="quadro">2</div>
+                                <ul>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                        <ul>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                            </li>
+                                            <li>    
+                                                <div class="quadro">4</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                        <ul>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                            </li>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="quadro">2</div>
+                            </li>
+                            <li>
+                                <div class="quadro">2</div>
+                                <ul>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                        <ul>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                            </li>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="quadro">3</div>
+                                        <ul>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                            </li>
+                                            <li>
+                                                <div class="quadro">4</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/chave.js"></script>
+</body>
+</html>
