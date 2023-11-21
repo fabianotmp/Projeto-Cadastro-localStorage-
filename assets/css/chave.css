@@ -97,6 +97,7 @@ h2{
 .chave li .quadro, .repescagem li .quadro{
     background-color: var(--preto);
     color: var(--preto);
+	user-select:none;
 	width: 3.9em;
 	height: 3.9em;
 	border: 0.063em solid black;
